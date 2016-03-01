@@ -1,0 +1,7 @@
+Boston,Massachusetts
+Concord,New Hampshire
+Burlington,Vermont
+Augusta,Maine
+Albany,New York
+Springfield,Illinois
+Harrisburg,Pennsylvania
