@@ -6,12 +6,15 @@ import sys
 import textwrap
 import random
 
+def printScore():
+	global score
+	print"Your score is " + str(score) + "."
+
 fh = open("StatesAndCapitals.txt", "r")
 statesAndCapitals = []
 score = 0
 right = 0
 wrong = 0
-printScore = "Your score is " + str(score) + "."
 goodbye = textwrap.fill("You finished the game with a final score of " + str(score) \
 					     + ". You got " + str(right) + " correct and " + str(wrong) + " incorrect.")
 
@@ -30,21 +33,19 @@ print ""
 
 for item in statesAndCapitals:
 	parts = item.split(",")
-	state = parts[1]
-	capital = parts[0]
 	while True:
-		answer = raw_input("What is the capital of " + state + "?: ")
-		if answer == capital:
+		answer = raw_input("What is the capital of " + parts[1] + "?: ")
+		if answer == parts[0]:
 			score += 5
 			right += 1
 			print "You got it correct!"
-			print printScore
+			printScore()
 			break
 		else:
 			score -= 10
 			wrong += 1
 			print "You got it wrong!"
-			print printScore
+			printScore()
 			break
 	while True:
 		print ""
