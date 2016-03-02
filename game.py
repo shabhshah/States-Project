@@ -17,7 +17,11 @@ for line in fh:
 	statesAndCapitals.append(line)
 
 print ""
-print textwrap.fill("Welcome to Rishabh's State Capitals Game! You will be given a state and you need to answer with the correct capital. A correct answer is worth 5 points and an incorrect answer is worth -10 points.")
+
+print textwrap.fill("Welcome to Rishabh's State Capitals Game! \
+You will be given a state and you need to answer with the correct capital. \
+A correct answer is worth 5 points and an incorrect answer is worth -10 points.")
+
 print ""
 
 while True:
