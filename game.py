@@ -33,20 +33,17 @@ print ""
 
 for item in statesAndCapitals:
 	parts = item.split(",")
-	while True:
-		answer = raw_input("What is the capital of " + parts[1] + "?: ")
-		if answer == parts[0]:
-			score += 5
-			right += 1
-			print "You got it correct!"
-			printScore()
-			break
-		else:
-			score -= 10
-			wrong += 1
-			print "You got it wrong!"
-			printScore()
-			break
+	answer = raw_input("What is the capital of " + parts[1] + "?: ")
+	if answer == parts[0]:
+		score += 5
+		right += 1
+		print "You got it correct!"
+		printScore()
+	else:
+		score -= 10
+		wrong += 1
+		print "You got it wrong!"
+		printScore()
 	while True:
 		print ""
 		playAgain = raw_input("Would you like to play another state?: ")
